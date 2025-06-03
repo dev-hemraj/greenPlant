@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ~~~~~~~~~~~~~~~ Favicon ~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+    <!-- ~~~~~~~~~~~~~~~ Remix Icon ~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <!-- ~~~~~~~~~~~~~~~ Swiperjs ~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- ~~~~~~~~~~~~~~~ Link css ~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <link href="./src/output.css" rel="stylesheet" />
+    <title>GreenPlant : TailwindCss</title>
+  </head>
+  <body>
+    <!-- ~~~~~~~~~~~~~~~ HEADER ~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <header id="navbar" class="bg-green-950 fixed w-full top-0 left-0 z-50">
+      <nav
+        class="container mx-auto flex items-center justify-between h-16 px-5 lg:px-0 sm:h-20"
+      >
+        <div class="font-lobster sm:text-2xl">GreenPlants.</div>
+        <div
+          id="nav-menu"
+          class="absolute top-0 left-[-100%] min-h-[100vh] w-full bg-green-950/80 backdrop-blur-sm flex items-center justify-center duration-300 overflow-hidden lg:static lg:min-h-fit lg:w-auto lg:bg-transparent"
+        >
+          <ul class="flex flex-col items-center gap-8 lg:flex-row">
+            <li><a class="nav-link active" href="#home">Home</a></li>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#popular">Popular</a></li>
+            <li><a class="nav-link" href="#review">Review</a></li>
+          </ul>
+          <div class="absolute bottom-0 -right-10 opacity-70 lg:hidden">
+            <img
+              src="assets/images/leaf-big.png"
+              alt="leaf image"
+              class="w-32"
+            />
+          </div>
+          <div class="absolute -top-5 -left-5 rotate-90 opacity-70 lg:hidden">
+            <img src="assets/images/leaf-2.png" alt="leaf image" class="w-32" />
+          </div>
+        </div>
+        <div class="text-2xl cursor-pointer z-50 lg:hidden">
+          <i class="ri-menu-4-line" id="hamburger"></i>
+        </div>
+      </nav>
+    </header>
+    <!-- ~~~~~~~~~~~~~ HOME BANNER ~~~~~~~~~~~~~~~~ -->
+    <section id="home" class="relative overflow-hidden">
+      <div class="container mx-auto px-4 lg:px-0">
+        <!-- blob 1 -->
+        <div
+          class="w-64 h-64 bg-green-700 rounded-full blur-3xl opacity-40 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-50"
+        ></div>
+
+        <!-- blob 2 -->
+        <div
+          class="w-64 h-64 bg-green-700 rounded-full blur-3xl opacity-40 absolute right-0 bottom-0"
+        ></div>
+        <div class="flex flex-col items-center gap-5 lg:flex-row">
+          <!-- Banner left content -->
+          <div class="home__data w-full space-y-5 lg:w-1/2">
+            <h1 class="font-bold text-4xl xl:text-6xl">
+              <span class="text-yellow-500">Plants</span> make a <br />
+              positive
+              <span class="text-yellow-500">impact</span> on <br />
+              your environment
+            </h1>
+            <p class="text-slate-300 font-lobster">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+              quidem maiores ipsum dolorem quaerat ab distinctio ut, harum
+              eveniet alias provident libero corrupti.
+            </p>
+            <div class="flex gap-2 sm:flex-row lg:gap-4 lg:pt-5 xxl:pt-10">
+              <button class="btn">
+                <span>Shop Now</span>
+                <i class="ri-leaf-line"></i>
+              </button>
+              <button class="btn btn-outline">
+                <span>know More</span>
+                <i class="ri-leaf-line"></i>
+              </button>
+            </div>
+            <p class="text-xs font-lobster text-slate-300">
+              You will get 30-days free trial.
+            </p>
+            <div class="flex items-center gap-5 text-2xl lg:pt-10">
+              <i
+                class="ri-facebook-fill text-slate-300 hover:text-yellow-500 duration-300 cursor-pointer"
+              ></i>
+              <i
+                class="ri-twitter-line text-slate-300 hover:text-yellow-500 duration-300 cursor-pointer"
+              ></i>
+              <i
+                class="ri-instagram-line text-slate-300 hover:text-yellow-500 duration-300 cursor-pointer"
+              ></i>
+              <i
+                class="ri-linkedin-fill text-slate-300 hover:text-yellow-500 duration-300 cursor-pointer"
+              ></i>
+            </div>
+          </div>
+          <!-- Banner right image -->
+          <div class="w-full relative lg:w-1/2 flex justify-center">
+            <img
+              src="assets/images/gamala.png"
+              alt="gamala ko phool"
+              class="lg:w-150 w-90 home__image"
+            />
+            <!-- Leaf  -->
+            <div class="absolute -top-5 right-0 opacity-30">
+              <i class="ri-leaf-line text-6xl text-yellow-500"></i>
+            </div>
+            <!-- flower -->
+            <div class="absolute bottom-0 left-0 opacity-30">
+              <i class="ri-flower-line text-6xl text-yellow-500"></i>
+            </div>
+            <!-- Plant -->
+            <div class="absolute -top-5 -left-5 opacity-30 hidden lg:block">
+              <i class="ri-plant-line text-6xl text-yellow-500"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ~~~~~~~~~~~~~ SERVICES ~~~~~~~~~~~~~~~~ -->
+    <section id="services" class="bg-white text-green-900 py-20">
+      <div
+        class="container mx-auto px-4 w-full grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4"
+      >
+        <!-- Card 1 -->
+        <div
+          class="services__card border border-green-900 p-5 rounded-md cursor-pointer space-y-5 hover:shadow-xl hover:-trannslate-y-1 duration-300"
+        >
+          <div class="flex items-center gap-5">
+            <i class="ri-truck-line text-3xl"></i>
+            <p class="font-bold text-lg">Fast Delivery</p>
+          </div>
+          <p class="font-lobster">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+            voluptatem illo, ad vel repellat nihil est numquam consequatur sequi
+            similique, culpa ut.
+          </p>
+        </div>
+        <!-- Card 2 -->
+        <div
+          class="services__card border border-green-900 p-5 rounded-md cursor-pointer space-y-5 hover:shadow-xl hover:-trannslate-y-1 duration-300"
+        >
+          <div class="flex items-center gap-5">
+            <i class="ri-customer-service-line text-3xl"></i>
+            <p class="font-bold text-lg">Great customer services</p>
+          </div>
+          <p class="font-lobster">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+            voluptatem illo, ad vel repellat nihil est numquam consequatur sequi
+            similique, culpa ut.
+          </p>
+        </div>
+        <!-- Card 3 -->
+        <div
+          class="services__card border border-green-900 p-5 rounded-md cursor-pointer space-y-5 hover:shadow-xl hover:-trannslate-y-1 duration-300"
+        >
+          <div class="flex items-center gap-5">
+            <i class="ri-plant-line text-3xl"></i>
+            <p class="font-bold text-lg">Original Plants</p>
+          </div>
+          <p class="font-lobster">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+            voluptatem illo, ad vel repellat nihil est numquam consequatur sequi
+            similique, culpa ut.
+          </p>
+        </div>
+        <!-- Card 4 -->
+        <div
+          class="services__card border border-green-900 p-5 rounded-md cursor-pointer space-y-5 hover:shadow-xl hover:-trannslate-y-1 duration-300"
+        >
+          <div class="flex items-center gap-5">
+            <i class="ri-money-dollar-circle-line text-3xl"></i>
+            <p class="font-bold text-lg">Affordable Price</p>
+          </div>
+          <p class="font-lobster">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+            voluptatem illo, ad vel repellat nihil est numquam consequatur sequi
+            similique, culpa ut.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- ~~~~~~~~~~~~~ ABOUT US ~~~~~~~~~~~~~~~~ -->
+    <section id="about" class="relative overflow-hidden">
+      <div
+        class="about__leaf aboutFancy absolute -top-8 -right-6 transform rotate-18 hidden lg:block"
+      >
+        <img
+          src="assets/images/about-fancy.png"
+          alt=""
+          class="w-40 opacity-40"
+        />
+      </div>
+      <div
+        class="about__Top flex flex-col items-center gap-3 text-center mb-10 md:mb-20"
+      >
+        <h2 class="title">About us</h2>
+        <p class="max-w-2xl">Lorem ipsum dolor sit amet consectetur.</p>
+      </div>
+      <div class="container mx-auto space-y-10 px-4">
+        <!-- item 1 -->
+        <div class="flex flex-col items-center lg:flex-row gap-5">
+          <!-- image -->
+          <div class="about__item__1-img w-full lg:w-1/2">
+            <img
+              src="assets/images/gamala-2.png"
+              alt=""
+              class="w-2/3 sm:w-1/2 lg:w-2/3 mx-auto"
+            />
+          </div>
+          <!-- Content -->
+          <div
+            class="about__item__1-content w-full lg:w-1/2 text-center lg:text-left"
+          >
+            <div class="space-y-5">
+              <h3 class="text-xl font-medium lg:text-2xl xl:text-3xl">
+                Make your <span class="text-yellow-500">organic</span><br />
+                garden
+              </h3>
+              <p class="font-lobster text-slate-300">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+                culpa debitis quaerat dolorem cum cumque aperiam sunt similique
+                nulla doloremque, nostrum eum! <br /><br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+                culpa debitis quaerat dolorem cum cumque aperiam sunt similique
+                nulla doloremque, nostrum eum!
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- item 2 -->
+        <div class="flex flex-col items-center gap-5 lg:flex-row-reverse">
+          <!-- image -->
+          <div class="about__item__2-img w-full lg:w-1/2">
+            <img
+              src="assets/images/gamala-3.png"
+              alt=""
+              class="w-2/3 sm:w-1/2 lg:w-2/3 mx-auto"
+            />
+          </div>
+          <!-- Content -->
+          <div
+            class="about__item__2-content w-full lg:w-1/2 text-center lg:text-left"
+          >
+            <div class="space-y-5">
+              <h3 class="text-xl font-medium lg:text-2xl xl:text-3xl">
+                Come with us <br />
+                <span class="text-yellow-500">grow up</span> your plant
+              </h3>
+              <p class="font-lobster text-slate-300">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+                culpa debitis quaerat dolorem cum cumque aperiam sunt similique
+                nulla doloremque, nostrum eum! <br />
+                <br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+                culpa debitis quaerat dolorem cum cumque aperiam sunt similique
+                nulla doloremque, nostrum eum!Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Vero, culpa debitis quaerat
+                dolorem cum cumque aperiam sunt similique nulla doloremque,
+                nostrum eum!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ~~~~~~~~~~~~~ Popular ~~~~~~~~~~~~~~~~ -->
+    <section id="popular" class="bg-green-900">
+      <div
+        class="popular__top flex flex-col items-center space-y-3 text-center mb-40 xl:mb-45"
+      >
+        <h2 class="title">Your choice plant</h2>
+        <p class="max-w-2xl">Lorem ipsum dolor sit amet consectetur</p>
+      </div>
+      <div
+        class="container w-full mx-auto px-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-x-8 gap-y-36"
+      >
+        <!-- card 1 -->
+        <div class="popular__card bg-green-950 p-10 pt-28 rounded-md relative">
+          <img
+            src="assets/images/gamala-3.png"
+            alt="product name"
+            class="w-full h-50 object-contain absolute -top-5 left-1/2 transform -translate-1/2 duration-500"
+          />
+          <p class="text-slate-400 italic text-[13px]">
+            Small height light text
+          </p>
+          <h3 class="text-2xl">Product name</h3>
+          <div class="text-yellow-500 text-x py-3">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-half-fill"></i>
+            <i class="ri-star-line text-gray-400"></i>
+            <i class="ri-star-line text-gray-400"></i>
+          </div>
+          <div class="flex items-center justify-between">
+            <p class="text-xl">$5</p>
+            <button
+              class="bg-yellow-500 px-2 py-1 rounded-sm text-xl cursor-pointer hover:bg-yellow-600 duration-300"
+            >
+              <i class="ri-shopping-cart-fill"></i>
+            </button>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="popular__card bg-green-950 p-10 pt-28 rounded-md relative">
+          <img
+            src="assets/images/gamala-2.png"
+            alt="product name"
+            class="w-full h-50 object-contain absolute -top-5 left-1/2 transform -translate-1/2 duration-500"
+          />
+          <p class="text-slate-400 italic text-[13px]">
+            Small height light text
+          </p>
+          <h3 class="text-2xl">Product name</h3>
+          <div class="text-yellow-500 text-x py-3">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-half-fill"></i>
+            <i class="ri-star-line text-gray-400"></i>
+            <i class="ri-star-line text-gray-400"></i>
+          </div>
+          <div class="flex items-center justify-between">
+            <p class="text-xl">$5</p>
+            <button
+              class="bg-yellow-500 px-2 py-1 rounded-sm text-xl cursor-pointer hover:bg-yellow-600 duration-300"
+            >
+              <i class="ri-shopping-cart-fill"></i>
+            </button>
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div class="popular__card bg-green-950 p-10 pt-28 rounded-md relative">
+          <img
+            src="assets/images/galams.png"
+            alt="product name"
+            class="w-full h-50 object-contain absolute -top-5 left-1/2 transform -translate-1/2 duration-500"
+          />
+          <p class="text-slate-400 italic text-[13px]">
+            Small height light text
+          </p>
+          <h3 class="text-2xl">Product name</h3>
+          <div class="text-yellow-500 text-x py-3">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-half-fill"></i>
+            <i class="ri-star-line text-gray-400"></i>
+            <i class="ri-star-line text-gray-400"></i>
+          </div>
+          <div class="flex items-center justify-between">
+            <p class="text-xl">$5</p>
+            <button
+              class="bg-yellow-500 px-2 py-1 rounded-sm text-xl cursor-pointer hover:bg-yellow-600 duration-300"
+            >
+              <i class="ri-shopping-cart-fill"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- card 4 -->
+        <div class="popular__card bg-green-950 p-10 pt-28 rounded-md relative">
+          <img
+            src="assets/images/gamala.png"
+            alt="product name"
+            class="w-full h-50 object-contain absolute -top-5 left-1/2 transform -translate-1/2 duration-500"
+          />
+          <p class="text-slate-400 italic text-[13px]">
+            Small height light text
+          </p>
+          <h3 class="text-2xl">Product name</h3>
+          <div class="text-yellow-500 text-x py-3">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-half-fill"></i>
+            <i class="ri-star-line text-gray-400"></i>
+            <i class="ri-star-line text-gray-400"></i>
+          </div>
+          <div class="flex items-center justify-between">
+            <p class="text-xl">$5</p>
+            <button
+              class="bg-yellow-500 px-2 py-1 rounded-sm text-xl cursor-pointer hover:bg-yellow-600 duration-300"
+            >
+              <i class="ri-shopping-cart-fill"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ~~~~~~~~~~~~~ Review ~~~~~~~~~~~~~~~~ -->
+    <section id="review" class="overflow-hidden relative">
+      <div
+        class="reviewFAncy absolute top-0 left-0 transform -rotate-270 opacity-40 hidden lg:block"
+      >
+        <img src="assets/images/phool.png" alt="flower" class="w-55" />
+      </div>
+      <div
+        class="review__top flex flex-col items-center gap-3 text-center mb-10 lg:mb-20"
+      >
+        <h2 class="title">Customer review</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="px-4 relative review__anim">
+        <div class="py-12 reviewSlide">
+          <ul class="swiper-wrapper">
+            <!-- Review -1  -->
+            <li class="swiper-slide">
+              <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+                  in nesciunt ullam optio nulla, rem nemo ab, architecto
+                  delectus laboriosam molestiae tempore ea rerum aut,
+                  accusantium illum! Consequatur mollitia natus incidunt
+                  reprehenderit doloremque.
+                </p>
+                <div class="flex items-center">
+                  <img
+                    src="assets/images/testo-1.jpg"
+                    alt="client review"
+                    class="w-15 h-15 rounded-full object-cover"
+                  />
+                  <div class="ml-2">
+                    <p class="text-yellow-500 uppercase">Karina Duwada</p>
+                    <p>Designer</p>
+                  </div>
+                  <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                </div>
+              </div>
+            </li>
+            <!-- Review - 2  -->
+            <li class="swiper-slide">
+              <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+                  in nesciunt ullam optio nulla, rem nemo ab, architecto
+                  delectus laboriosam molestiae tempore ea rerum aut,
+                  accusantium illum! Consequatur mollitia natus incidunt
+                  reprehenderit doloremque.
+                </p>
+                <div class="flex items-center">
+                  <img
+                    src="assets/images/testo-2.jpg"
+                    alt="client review"
+                    class="w-15 h-15 rounded-full object-cover"
+                  />
+                  <div class="ml-2">
+                    <p class="text-yellow-500 uppercase">Kamala Baniyea</p>
+                    <p>Designer</p>
+                  </div>
+                  <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                </div>
+              </div>
+            </li>
+
+            <!-- Review - 3  -->
+            <li class="swiper-slide">
+              <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+                  in nesciunt ullam optio nulla, rem nemo ab, architecto
+                  delectus laboriosam molestiae tempore ea rerum aut,
+                  accusantium illum! Consequatur mollitia natus incidunt
+                  reprehenderit doloremque.
+                </p>
+                <div class="flex items-center">
+                  <img
+                    src="assets/images/testo-3.jpg"
+                    alt="client review"
+                    class="w-15 h-15 rounded-full object-cover"
+                  />
+                  <div class="ml-2">
+                    <p class="text-yellow-500 uppercase">Muiya Kauli</p>
+                    <p>Designer</p>
+                  </div>
+                  <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                </div>
+              </div>
+            </li>
+            <!-- Review - 4  -->
+            <li class="swiper-slide">
+              <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+                  in nesciunt ullam optio nulla, rem nemo ab, architecto
+                  delectus laboriosam molestiae tempore ea rerum aut,
+                  accusantium illum! Consequatur mollitia natus incidunt
+                  reprehenderit doloremque.
+                </p>
+                <div class="flex items-center">
+                  <img
+                    src="assets/images/testo-4.jpg"
+                    alt="client review"
+                    class="w-15 h-15 rounded-full object-cover"
+                  />
+                  <div class="ml-2">
+                    <p class="text-yellow-500 uppercase">Bipin Turkari</p>
+                    <p>Designer</p>
+                  </div>
+                  <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                </div>
+              </div>
+            </li>
+            <!-- Review - 5  -->
+            <li class="swiper-slide">
+              <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+                  in nesciunt ullam optio nulla, rem nemo ab, architecto
+                  delectus laboriosam molestiae tempore ea rerum aut,
+                  accusantium illum! Consequatur mollitia natus incidunt
+                  reprehenderit doloremque.
+                </p>
+                <div class="flex items-center">
+                  <img
+                    src="assets/images/testo-5.jpg"
+                    alt="client review"
+                    class="w-15 h-15 rounded-full object-cover"
+                  />
+                  <div class="ml-2">
+                    <p class="text-yellow-500 uppercase">Omil Hudda</p>
+                    <p>Designer</p>
+                  </div>
+                  <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                </div>
+              </div>
+            </li>
+
+            <!-- Review - 6  -->
+            <li class="swiper-slide">
+              <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+                  in nesciunt ullam optio nulla, rem nemo ab, architecto
+                  delectus laboriosam molestiae tempore ea rerum aut,
+                  accusantium illum! Consequatur mollitia natus incidunt
+                  reprehenderit doloremque.
+                </p>
+                <div class="flex items-center">
+                  <img
+                    src="assets/images/testo-6.jpg"
+                    alt="client review"
+                    class="w-15 h-15 rounded-full object-cover"
+                  />
+                  <div class="ml-2">
+                    <p class="text-yellow-500 uppercase">Rijan Dama</p>
+                    <p>Designer</p>
+                  </div>
+                  <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!-- ~~~~~~~~~~~~~ FOOTER ~~~~~~~~~~~~~~~~ -->
+    <footer
+      id="footer"
+      class="bg-yellow-100 text-green-950 pt-20 pb-10 md:pt-28 relative mt-20 space-y-15"
+    >
+      <!-- newsletter -->
+      <div
+        class="container mx-auto px-4 text-white absolute top-0 right-0 left-0 -translate-y-1/2 xl:w-200"
+      >
+        <div class="bg-green-900 px-10 pt-5 pb-10 space-y-5 rounded-md">
+          <h3 class="text-xl">
+            <span class="text-yellow-500">Subscribe</span> to our newsletter
+          </h3>
+          <div class="flex flex-col md:flex-row gap-1">
+            <input
+              type="email"
+              placeholder="Enter your email..."
+              class="w-full bg-white px-5 py-3 text-green-900 rounded-md outline-none"
+            />
+            <button
+              class="flex items-center gap-1 justify-between bg-green-950 px-5 py-3 rounded-md cursor-pointer hover:opacity-80 duration-300"
+            >
+              Subscribe <i class="ri-send-plane-2-fill"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Icon -->
+      <div class="footer_icon container mx-auto px-4 mt-16 xl:mt-5">
+        <div class="border-b border-green-500 relative">
+          <div
+            class="absolute top-0 left-0 right-0 transform -translate-y-1/2 max-w-36 mx-auto"
+          >
+            <div class="bg-yellow-100 text-lg text-center space-x-2">
+              <i
+                class="ri-facebook-fill text-green-900 hover:text-yellow-500 duration-300 cursor-pointer"
+              ></i>
+              <i
+                class="ri-twitter-line text-green-900 hover:text-yellow-500 duration-300 cursor-pointer"
+              ></i>
+              <i
+                class="ri-instagram-line text-green-900 hover:text-yellow-500 duration-300 cursor-pointer"
+              ></i>
+              <i
+                class="ri-linkedin-fill text-green-900 hover:text-yellow-500 duration-300 cursor-pointer"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer Content -->
+      <div
+        class="footer__content container mx-auto px-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 text-center md:text-start"
+      >
+        <!-- item 1 -->
+        <div>
+          <div class="text-7xl text-green-700 text-center inline-block">
+            <i class="ri-leaf-fill"></i>
+            <p class="font-lobster text-xl sm:text-2xl">GreenPlants.</p>
+          </div>
+        </div>
+        <!-- item 2 -->
+        <div>
+          <p class="mb-5 font-bold text-xl">Quick Links</p>
+          <div class="flex flex-col gap-1">
+            <a href="#">Plants</a>
+            <a href="#">Flowers</a>
+            <a href="#">Seeds</a>
+            <a href="#">Shipping</a>
+            <a href="#">Order now</a>
+          </div>
+        </div>
+
+        <!-- item 3 -->
+        <div>
+          <p class="mb-5 font-bold text-xl">Popular Services</p>
+          <div class="flex flex-col gap-1">
+            <a href="#">Tree Planting</a>
+            <a href="#">Grass Cutting</a>
+            <a href="#">Gerdening</a>
+            <a href="#">Projects</a>
+            <a href="#">Weeds Control</a>
+          </div>
+        </div>
+
+        <!-- item 3 -->
+        <div>
+          <p class="mb-5 font-bold text-xl">Contact Us</p>
+          <div class="flex flex-col gap-1">
+            <a href="mailto:broz@hotmail.com">broz@hotmail.com</a>
+            <a href="tel:12457888">+11 221212121</a>
+            <p>
+              012 tailwind build, npm city, <br />
+              tailwind Land, USA
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright -->
+      <div class="copy__right container mx-auto px-4">
+        <p class="text-center mt-10 opacity-50">
+          Copyright &copy; 2024 LightCode. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <!-- ~~~~~~~~~~~~~~~~~~~~ Scroll Up ~~~~~~~~~~~~~~~~~ -->
+    <a
+      href="#"
+      class="fixed right-4 -bottom-1/2 bg-yellow-500 shadow-sm inline-block px-3 py-1 md:px-4 md:py-2 rounded-md text-lg z-50"
+      id="scroll-up"
+    >
+      <i class="ri-arrow-up-line"></i>
+    </a>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~ Swiper Js ~~~~~~~~~~~~~~~~~ -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~ scrollrevealjs ~~~~~~~~~~~~~~~~~ -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <!-- ~~~~~~~~~~~~~ Cusom Js Link ~~~~~~~~~~~~~~~~ -->
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>
