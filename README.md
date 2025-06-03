@@ -2,7 +2,7 @@
 
 Welcome to **GreenPlant**, a modern, responsive and aesthetically pleasing landing page for your plant-related business or project. Built with **HTML**, **Tailwind CSS**, and **Remix Icons**, it showcases elegant components and sections that ensure a delightful user experience across all devices.
 
-![App Screenshot](assets/images/screeshot.jpg)
+![App Screenshot](./assets/images/screenshot.jpg)
 
 ## 🌟 Features
 
